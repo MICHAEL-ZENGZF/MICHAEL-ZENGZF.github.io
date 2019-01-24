@@ -79,6 +79,7 @@ git push
 <p>Second, open your id_rsa.pub, copy everything inside.<br>Then open your personal github account, go to settings-&gt;SSH and GPG keys -&gt;New SSh key, paste there.</p>
 <p><img src="/images/Github/Go_To_Settings.PNG" alt=""></p>
 <p>Third, create a file ~/.bashrc, paste the following and save:  </p>
+<p>‘’’</p>
 <pre><code>env=~/.ssh/agent.env
 
 agent_load_env () { test -f &quot;$env&quot; &amp;&amp; . &quot;$env&quot; &gt;| /dev/null ; }
@@ -100,7 +101,8 @@ elif [ &quot;$SSH_AUTH_SOCK&quot; ] &amp;&amp; [ $agent_run_state = 1 ]; then
 fi
 ssh-add ~/.ssh/id_rsa
 unset env
-</code></pre><p>Open a new git bash and now you should be able to access our repo with ssh.<br>Don`t forget to go to your project directory and input:</p>
+</code></pre><p>‘’’</p>
+<p>Open a new git bash and now you should be able to access our repo with ssh.<br>Don`t forget to go to your project directory and input:</p>
 <blockquote>
 <p>git remote set-url origin git@your_git_repo_link</p>
 </blockquote>
