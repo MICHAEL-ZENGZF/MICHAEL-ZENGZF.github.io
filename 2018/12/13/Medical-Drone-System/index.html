@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Medical Drone System | Zenz</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Medical Drone System</h1><a id="logo" href="/.">Zenz</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Medical Drone System</h1><div class="post-meta">Dec 13, 2018<span> | </span><span class="category"><a href="/categories/Project/">Project</a></span></div><div class="post-content"><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Emergent medical situations happen every day and everywhere and require proper treatment. However, the current ambulance distribution system is far from effective on providing emergent medical service due to the restriction of time, location, traffic situation, etc. In this case, many people who encounter emergent medical situations do not receive proper treatment and may face threats to their lives. A more effective way to provide urgent medical service is required.</p>
+<p>As drones is more widely used nowadays, it has become a very useful tool for entertainment, photographing, and monitoring. However, it has never been used in providing immediate medical service. Drones have great flexibility and can travel a distance of half a kilometer in a few minutes. When an urgent medical situation occurs, a drone can reach the scene and carry a moderate amount of medical supplies in a few minutes. Meanwhile, an ambulance may take 15-20 minutes to reach the scene and provide help. There is a huge potential for drones to help dealing with simple but urgent medical situation like heart attack, asthma, epilepsy. When facing a complex medical situation, drones are not capable of delivering better help than ambulances do, but in other cases, drones can provide more instant service than ambulances do, which may be crucial in saving peoples life. Instead of replacing the current ambulances distribution system, we plan to build a medical drone system that aims to be a supplement to the ambulances distribution system, which can remarkably reduce the workload of system and provide more effective service. The system is great for places like schools, park, shops malls and can provide medical supply (mainly medicines) for medical situations including heart attack, asthma, epilepsy, etc.</p>
+<h2 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h2><p>The purpose of the project is to design a medical drone system that allows its users to acquire medical support delivered by an AI-controlled drone under emergencies.</p>
+<h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>The objectives of the project are to establish a system, which includes user application, network server, automatic drone controller, and a drone. Users are supposed to be able to require medical support on their smartphones with the application installed. The server should receive request from users and send the request to the drone controller. After processing the request, the drone controller should be able to fly the drone automatically to users and deliver the medical support they have required.</p>
+<h2 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h2><p>Basic Components</p>
+<p><img src="/images/Classes/EECS159/Slides.jpg" alt=""></p>
+<p>As Shown in the Graph, the physical component of the project can be divided into 4 parts:</p>
+<ol>
+<li>A user app that allows the user to send request according to the user`s need.</li>
+<li>A server that can answer the request and communicate with the drone control device</li>
+<li>An App for the controlling Android device to communicate with server and control the drone.</li>
+<li>Computer Vision Application on the controlling device to help identifying and locating the user.</li>
+</ol>
+<p>Procedure Graph:Procedure Graph:</p>
+<p><img src="/images/Classes/EECS159/Procedure.jpg" alt=""></p>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ol>
+<li>User App Development</li>
+</ol>
+<p>1.1.     Description</p>
+<p>We will build an Android APP that will implement the functionalities we need.</p>
+<p>1.2.    Functions</p>
+<p>1.2.1    Allow users to select medical support type and send request to our server</p>
+<p>1.2.2    Show the current drone location through google map</p>
+<p>1.2.3    Show the current camera vision of the drone on the user App</p>
+<ol start="2">
+<li>Server Building</li>
+</ol>
+<p>2.1    Description </p>
+<p>We will use a cloud server provided by Google with a 1 year`s free trial to receive the request from user App and send it to the controlling Android device.</p>
+<p>2.2    Functions</p>
+<p>2.2.1    Receive the request sent from user App based on Ubuntu 18.04</p>
+<p>2.2.2    Store the request and GPS information in the cloud server </p>
+<p>2.2.3    Automatically process the request and send it to the controller</p>
+<p>2.2.4    Receive current video captured by the drone and send it to the User App</p>
+<ol start="3">
+<li>Controlling Android Device App Development</li>
+</ol>
+<p>3.1.    Description</p>
+<p>We plan to use DJI drone as our primary device. DJI is the world’s leader in commercial and civilian drone industry, accounting for over 70% of the drone market. (Wikipedia, 2018) DJI`s drone product is widely considered to be safe and reliable, with a mature developer’s toolkit for developers to deploy their application.</p>
+<p>We consider connecting the controlling device with the server through the Internet. In addition, we make a backup plan for our connection.</p>
+<p>3.2.    Connection between Server</p>
+<p>Basically, we plan to connect the controlling device with our server through Internet.</p>
+<p>3.2.1    Backup Plan</p>
+<p>Since we are not professional in Network Programming, it is possible that the stability and speed of the connection between controlling device and server is not enough satisfying, which may cause safety issues. In such case we will set our personal laptop as the server, and connect the controlling device and server with Bluetooth, which can provide satisfying stability and speed for connection but may limit the ability to answer multiple requests.</p>
+<p>3.3.    Controlling</p>
+<p>DJI provides a mature developer’s toolkit-MobileSDK, providing full access to all DJI drone`s capabilities. With MobileSDK we can simplify low level functionality developing such as flight stabilization, battery management or signal transmission and focus on our application. (DJI Company, 2018)</p>
+<p>We will develop our application base on the MobileSDK and integrate other necessary functions.</p>
+<ol start="4">
+<li>Locating and Image Processing</li>
+</ol>
+<p>4.1.    Goals:</p>
+<p>We set 3 goals for user locating.</p>
+<p>Basic:</p>
+<p>The drone will locate the user through their GPS information, and then land nearby. The drone will land with a safe margin of 6 meters away from the user.</p>
+<p>Advance:</p>
+<p>We identify the user through his posture: we consider to ask the user to do a special posture (like raising the user`s hand or lying on the ground) so that we can identify the user and land near the user.</p>
+<p>Ultimate:</p>
+<p>We still assume the user are in a special posture. In addition to this we will do a 3D reconstruction from the original image and let the drone do self-navigation.</p>
+<p>We also make two backup plans for our locating mission.</p>
+<p>4.2.    Model Selection</p>
+<p>We plan to use YOLOv3 or TinyYOLOv3 to do Object Detection. YOLO is a deep Object Detection model with a high processing speed and a satisfying accuracy. (Joseph Redmon, 2015) YOLOv3 can provide a much better accuracy with a satisfying performance. (J. Redmon, 2018)</p>
+<p>4.3.    Backup Plan1: Process On Server </p>
+<p>In case the compute capability of the Android device does not meet our requirement, we will do the image processing on the server and send the control command to the controller directly.</p>
+<p>4.4.    Backup Plan2: AprilTag</p>
+<p>AprilTags are 2D barcodes with a corresponding library that helps to localization.</p>
+<p><img src="/images/Classes/EECS159/apriltags.png" alt=""></p>
+<p>The library will detect any AprilTags in the image and return a unique ID, coordinates for each AprilTag, if the size is known and camera is calibrated.</p>
+<p>We plan to set some special locations and place some AprilTag on it, so that after receiving the request the drone will fly to the nearest AprilTag location to the user and land on it through locating the AprilTags. User can go to the nearest AprilTag spot to acquire medical support delivered by drone. (Olson, 2011)</p>
+<ol start="5">
+<li>Others</li>
+</ol>
+<p>Reason for Drone Selection:</p>
+<p>Instead of building a drone from startup, we plan to use DJI drone which is safer and more stable. DJI provides a mature developer’s toolkit for drone controlling, which will allow us to focus more on our application. In addition, since we need to do user identifying, we need the drone to transmit current image to our Android device or server to analyze the image. Building such a system with a considerable stability requires professional knowledge on communication, which is out of our capability, and DJI products provides exactly the function we need with high quality.</p>
+<p>Reason for Separating Controlling Device and Server:</p>
+<p>We plan to only use one drone for our project. However, in order to build a “system” that allows multiple request to be answer simultaneously, we want to separate the request answering part and the controlling part. In addition, we don`t want to build our system on a DIY connection between drone and server, instead the connection build by DJI is much more trustworthy, which also accounts for our choice.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>DJI Company. (Sep.4th, 2018). Mobile SDK Introduction. Source: DJI Developer: <a href="http://developer.dji.com/mobile-sdk/documentation/introduction/mobile_sdk_introduction.html" target="_blank" rel="noopener">http://developer.dji.com/mobile-sdk/documentation/introduction/mobile_sdk_introduction.html</a></p>
+<p>J. Redmon, A. F. (2018). Yolov3: An incremental improvement.</p>
+<p>Joseph Redmon, S. D. (2015). You Only Look Once: Unified, Real-Time Object Detection. The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 779-788). CVPR 2016.</p>
+<p>Olson, E. (2011). AprilTag: A robust and flexible visual fiducial system. Proceedings of the IEEE International Conference on Robotics and Automation (ICRA).</p>
+<p>Wikipedia. (Nov.1st, 2018). DJI (company). Retrieved from Wikipedia: <a href="https://en.wikipedia.org/wiki/DJI_(company)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/DJI_(company)</a></p>
+</div><div class="tags"><a href="/tags/UCI/">UCI</a></div><div class="post-nav"><a class="pre" href="/2019/01/23/How-to-Use-Github/">How to Use Github I - Quick Start</a><a class="next" href="/2018/12/13/Backward-Theorem-Proving-Innovated-Geometry-Problem-Solver/">Backward Theorem Proving Innovated Geometry Problem Solver</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://yoursite.com"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JAVA/">JAVA</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/UCI/" style="font-size: 15px;">UCI</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/23/How-to-Use-Github/">How to Use Github I - Quick Start</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/13/Medical-Drone-System/">Medical Drone System</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/13/Backward-Theorem-Proving-Innovated-Geometry-Problem-Solver/">Backward Theorem Proving Innovated Geometry Problem Solver</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/Tomcat-Restart-Issue/">Tomcat Restart Issue</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/Java-tiny-issues/">Java tiny issues</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="https://michaelzengzf.wixsite.com/mysite-1" title="EECS 118 Personal Website" target="_blank">EECS 118 Personal Website</a><ul></ul><a href="https://wangweixi12345.wixsite.com/website" title="Medical Drone System" target="_blank">Medical Drone System</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">Zenz.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
