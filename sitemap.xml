@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/04/02/How-to-use-Github-SSH/</loc>
+    
+    <lastmod>2019-04-02T16:52:43.629Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/04/01/How-to-Use-Github-III-Use-MergeTool/</loc>
     
-    <lastmod>2019-04-02T02:47:18.368Z</lastmod>
+    <lastmod>2019-04-02T16:52:43.629Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/01/28/How-to-use-Github-II-Work-on-independent-branch/</loc>
+    
+    <lastmod>2019-04-02T16:50:53.147Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/23/How-to-Use-Github/</loc>
     
-    <lastmod>2019-03-02T20:05:40.037Z</lastmod>
+    <lastmod>2019-04-02T16:50:49.904Z</lastmod>
     
   </url>
   
@@ -19,13 +33,6 @@
     <loc>http://yoursite.com/2019/02/13/linux-GUI-application-on-windows-docker/</loc>
     
     <lastmod>2019-02-14T04:48:35.717Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/01/28/How-to-use-Github-II-Work-on-independent-branch/</loc>
-    
-    <lastmod>2019-01-29T01:33:32.336Z</lastmod>
     
   </url>
   
